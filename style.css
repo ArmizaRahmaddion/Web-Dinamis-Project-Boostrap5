@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,700&display=swap");
+* {
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background: #040d12;
+}
+.navbar {
+  backdrop-filter: blur (1.5px);
+}
+
+.navbar .navbar-brand {
+  font-weight: bolder;
+}
+
+.navbar .collapse {
+  font-weight: bolder;
+}
+
+.navbar .container {
+  font-weight: bolder;
+}
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+}
+.carousel-caption {
+  bottom: 220px;
+  z-index: 2;
+}
+.carousel-caption h5 {
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+  color: #93b1a6;
+  text-shadow: 10px 10px 10px rgb(10, 10, 10, 1);
+  line-height: 1.2;
+  font-size: 3em;
+}
+.carousel-caption p {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+.carousel-inner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.portfolio .card {
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Style dasar untuk kontainer gambar */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style untuk gambar */
+.image-container img {
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+}
+.galery .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 5rem;
+  margin-right: 10rem;
+  display: flex;
+}
+
+.gallery-container {
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.galery-image {
+  flex: 0 0 auto;
+  width: 50%;
+  scroll-snap-align: start;
+  border: 1px solid #666;
+  padding: 1.5rem;
+}
+
+.galery-image img {
+  width: 100%;
+  height: auto;
+  scroll-snap-stop: always;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-caption {
+    bottom: 370px;
+  }
+  .carousel-caption p {
+    width: 100%;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+  .img-area img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .carousel-caption {
+    bottom: 125px;
+  }
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+  .carousel-caption a {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  .carousel-caption p {
+    width: 100%;
+    line-height: 1.6;
+    font-size: 12px;
+  }
+  .about-text {
+    padding-top: 50px;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+}
+
+/* CSS untuk iframe peta */
+.map {
+  width: 100%;
+  height: 400px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+  border: none; /* Menghilangkan border iframe */
+}
+
+/* CSS untuk form */
+form {
+  max-width: 400px; /* Sesuaikan lebar maksimum sesuai kebutuhan Anda */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #93b1a6; /* Warna latar belakang form */
+  border-radius: 5px;
+}
+
+/* CSS untuk input-group (grup ikon dan input) */
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input-group i {
+  font-size: 20px;
+  margin-right: 40px;
+  color: #183d3d; /* Warna ikon */
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc; /* Warna border input */
+  border-radius: 5px;
+}
+
+/* CSS untuk tombol kirim pesan */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #183d3d; /* Warna latar belakang tombol */
+  color: #fff; /* Warna teks tombol */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect pada tombol */
+.btn:hover {
+  background-color: #0056b3; /* Warna latar belakang tombol saat hover */
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #183d3d;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
